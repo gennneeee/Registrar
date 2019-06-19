@@ -1,0 +1,15 @@
+{
+    "name": "vendor/sample-bot1",
+    "description": "Description of project SampleBot1.",
+    "authors": [
+        {
+            "name": "Gene",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "botman/botman": "2.5.0",
+        "botman/driver-web": "1.5.1",
+        "doctrine/cache": "v1.8.0"
+    }
+}

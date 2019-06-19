@@ -1,0 +1,4 @@
+<?php return unserialize('a:2:{s:8:"lifetime";i:1560843073;s:4:"data";a:5:{s:12:"conversation";O:55:"BotMan\\BotMan\\Messages\\Conversations\\InlineConversation":2:{s:8:"' . "\0" . '*' . "\0" . 'token";N;s:12:"' . "\0" . '*' . "\0" . 'cacheTime";N;}s:8:"question";s:30:"s:22:"what can i do for you?";";s:20:"additionalParameters";s:6:"a:0:{}";s:4:"next";s:252:"C:32:"Opis\\Closure\\SerializableClosure":206:{a:5:{s:3:"use";a:0:{}s:8:"function";s:83:"function($bot){
+    $bot->startConversation(new CSSOmembershipconversation);
+    
+}";s:5:"scope";N;s:4:"this";N;s:4:"self";s:32:"00000000402d858a000000001f0a2ef1";}}";s:4:"time";s:21:"0.31987300 1560841273";}}');
