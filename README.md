@@ -1,2 +1,2 @@
 # Registrar 
-Dont read me!! Close immidiately
+Dont read me!! Close immidiately!
