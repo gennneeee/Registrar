@@ -265,21 +265,28 @@ class inquireConversation extends Conversation {
             $continue = strtolower(trim($answer->getText()));
 
             if ($continue === 'form') {
-                $this->say('Please check the forms at this link: '
+                 $this->say('Please Click Here:'
+                        . '<br>'
+                        . '<a href="https://cvsu.edu.ph/wp-content/uploads/2019/01/2019-application-form-for-admission.pdf" target="_blank">'
+                        . 'APPLICATION FOR ADMISSION FORM</a>'
                         . '<br>'
                         . '<br>'
-                        . 'APPLICATION FOR ADMISSION FORM'
-                        . '<br>'
-                        . 'https://cvsu.edu.ph/wp-content/uploads/2019/01/2019-application-form-for-admission.pdf'
-                        . '<br>'
-                        . '<br>'
-                        . 'PRE-REGISTRATION FORM'
-                        . '<br>'
-                        . 'https://drive.google.com/file/d/1D8yZCXl3Xc7kCTGz61EjVRse_incTN96/view');
+                        . '<a href="https://drive.google.com/file/d/1D8yZCXl3Xc7kCTGz61EjVRse_incTN96/view" target="_blank_">'
+                        . 'PRE-REGISTRATION FORM</a>');
+                 $this->askBack();
             } else if ($continue === 'fee') {
+                 $this->say('Enrollment Fee'
+                         . '<br>'
+                         . '<br>'
+                         . '1. 100000'
+                         . '2. 200000'
+                         . '3. 300000');
+                 $this->askBack();
 //                $a = rand(0,5);
 //                $this->say("{$a}");
             } else if ($continue === 'proc') {
+                 $this->say('aaaaaaaaa');
+                 $this->askBack();
                 
             } else if ($continue === 'back') {
                 $this->askCategory();
@@ -369,7 +376,8 @@ class inquireConversation extends Conversation {
                         . '<br>'
                         . '5. Undergo medical examination at CvSU Health Services Unit (infirmary).'
                         . '<br>'
-                        . '6. follow the enrollment procedure (at Registrar Office).');
+                        . '6. follow the enrollment procedure (at Registrar Office).'
+                        . '<br>');
                 $this->askBack();
             } else if ($continue === 'back') {
                 $this->askAdmission();
