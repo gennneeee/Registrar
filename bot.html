@@ -3,6 +3,7 @@
     <head>
         <title>CvSU Registrar</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
     </head>
     <body>
         <script>
@@ -20,5 +21,72 @@
             };
         </script>
         <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+        <div class>
+            <img src="logo.png">
+        </div>
+        <div class="inner">
+            <center><h2 style="color:#7EC431;"><a href="#">Add Subjects</a></h2></center>
+            <p class="desc"> You can add specific subjects that you want after the enrollment period</p>
+            <center><p class="desc">The schedule will be posted soon</p></center>
+        </div>
+
+        <div class="inner">
+            <center><h2 style="color:#7EC431;"><a href="#">Drop Subjects</a></h2></center>
+            <center><p class="desc">You can drop specific subjects that you want after the enrollment period </p> </center>
+            <center><p class="desc">The schedule will be posted soon</p></center>
+        </div>
+
+        <div class="inner">
+            <center><h2 style="color:#7EC431;"><a href="#">Change Grades</a></h2></center>
+            <center><p class="desc"> You can change grades on subjects that you want after the enrollment period </p></center> 
+            <center><p class="desc">The schedule will be posted soon</p></center>
+        </div>
+        <h1>Time Until Schedule starts</h1> 
+        <div id="clockdiv"> 
+            <div>     
+                <span class="days" id="day"></span> 
+                <div class="smalltext">Days</div> 
+            </div> 
+            <div> 
+                <span class="hours" id="hour"></span> 
+                <div class="smalltext">Hours</div> 
+            </div> 
+            <div> 
+                <span class="minutes" id="minute"></span> 
+                <div class="smalltext">Minutes</div> 
+            </div> 
+            <div> 
+                <span class="seconds" id="second"></span> 
+                <div class="smalltext">Seconds</div> 
+            </div> 
+        </div> 
+        <script>
+
+            var deadline = new Date("Jun 20, 2019 15:37:25").getTime();
+
+            var x = setInterval(function () {
+
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("hour").innerHTML = hours;
+                document.getElementById("minute").innerHTML = minutes;
+                document.getElementById("second").innerHTML = seconds;
+                if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "TIME UP";
+                    document.getElementById("day").innerHTML = '0';
+                    document.getElementById("hour").innerHTML = '0';
+                    document.getElementById("minute").innerHTML = '0';
+                    document.getElementById("second").innerHTML = '0';
+                }
+            }, 1000);
+        </script> 
     </body>
+
+
 </html>
