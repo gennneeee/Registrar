@@ -2,6 +2,7 @@
 
 require_once 'vendor/autoload.php';
 require_once './registrarConversation.php';
+require_once './inquireConversation.php';
 
 use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
@@ -20,6 +21,10 @@ $botman = BotManFactory::create([], new DoctrineCache($cacheDriver));
 
 $botman->hears('Hello', function($bot) {
     $bot->startConversation(new registrarConversation());
+});
+
+$botman->hears('Hello CvSU', function($bot) {
+    $bot->startConversation(new inquireConversation());
 });
 
 $botman->fallback(function($bot) {
